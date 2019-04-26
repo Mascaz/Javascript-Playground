@@ -1,19 +1,30 @@
-var testObj =
-    {
-      "hat": "ballcap",
-      "shirt": "jersey",
-      "shoes": "cleats",
-      "a drink": "gatorade"
-    };
+var myMusic =
+    [
+        {
+            "artist": "Billy Joel",
+            "title": "Piano Man",
+            "release_year": 1973,
+            "formats":
+            [
+                "CD",
+                "8T",
+                "LP"
+            ],
+            "gold": true
+        },
+        {
+            "artist": "Beau Carnes",
+            "title": "Cereal Man",
+            "release_year": "2003",
+            "formats": ["video"]
+        }
+    ];
 
-console.log(testObj.hat); //dot notation to access object members
-console.log(testObj["a drink"]); // objects with spaces need to retrieved with brackets
+var musicFormat = myMusic[0].formats;
+console.log(musicFormat);
 
-testObj.sport = "baseball";
+var LPFormat = myMusic[0].formats[2];
+console.log(LPFormat);
 
-console.log(testObj);
-
-delete testObj["a drink"];
-
-console.log(testObj);
-
+//making copies of objects
+var musicCollectionCopy = JSON.parse(JSON.stringify(myMusic));
