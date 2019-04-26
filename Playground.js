@@ -1,11 +1,26 @@
-function nextInLine(arr, item)
+function caseInSwitch(val)
 {
-    arr.push(item);
-    return arr.shift();
+    var answer = "";
+    switch(val)
+    {
+        case 1:
+            answer = "alpha";
+            break;
+        case 2:
+            answer = "beta";
+            break;
+        case 3:
+            answer = "gamma";
+            break;
+        case 4:
+            answer = "delta";
+            break;
+        default:
+            answer = "none";
+            break;
+    }
+
+    return answer;
 }
 
-var testArr = [1,2,3,4,5];
-
-console.log("Before: " + JSON.stringify(testArr));
-console.log(nextInLine(testArr, 6));
-console.log("After: " + JSON.stringify(testArr));
+console.log(caseInSwitch(5));
