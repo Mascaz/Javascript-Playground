@@ -1,26 +1,19 @@
-function caseInSwitch(val)
-{
-    var answer = "";
-    switch(val)
+var testObj =
     {
-        case 1:
-            answer = "alpha";
-            break;
-        case 2:
-            answer = "beta";
-            break;
-        case 3:
-            answer = "gamma";
-            break;
-        case 4:
-            answer = "delta";
-            break;
-        default:
-            answer = "none";
-            break;
-    }
+      "hat": "ballcap",
+      "shirt": "jersey",
+      "shoes": "cleats",
+      "a drink": "gatorade"
+    };
 
-    return answer;
-}
+console.log(testObj.hat); //dot notation to access object members
+console.log(testObj["a drink"]); // objects with spaces need to retrieved with brackets
 
-console.log(caseInSwitch(5));
+testObj.sport = "baseball";
+
+console.log(testObj);
+
+delete testObj["a drink"];
+
+console.log(testObj);
+
