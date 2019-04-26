@@ -1,30 +1,31 @@
-var myMusic =
-    [
-        {
-            "artist": "Billy Joel",
-            "title": "Piano Man",
-            "release_year": 1973,
-            "formats":
-            [
-                "CD",
-                "8T",
-                "LP"
-            ],
-            "gold": true
-        },
-        {
-            "artist": "Beau Carnes",
-            "title": "Cereal Man",
-            "release_year": "2003",
-            "formats": ["video"]
-        }
-    ];
+var myArray = [];
 
-var musicFormat = myMusic[0].formats;
-console.log(musicFormat);
+var i = 0;
 
-var LPFormat = myMusic[0].formats[2];
-console.log(LPFormat);
+while(i < 5)
+{
+    myArray.push(i);
+    i++;
+}
 
-//making copies of objects
-var musicCollectionCopy = JSON.parse(JSON.stringify(myMusic));
+console.log(myArray);
+
+myArray = [];
+
+for (var i = 1; i <= 5; i++)
+{
+    myArray.push(i);
+}
+
+console.log(myArray);
+
+//Looping through an array
+var newArray = [9, 10, 11, 12];
+var total = 0;
+
+for (var i = 0; i < newArray.length; i++)
+{
+    total += newArray[i];
+}
+
+console.log(total);
